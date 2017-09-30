@@ -1,0 +1,62 @@
+
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // ADD USER
+        h2 Add User
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='UserName')
+                br
+                br
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                br
+                input#inputUserPhoneNo(type='tel', placeholder='Phone no')
+                br
+                br
+                input#inputUserAddress(type='text', placeholder='Address')
+                br
+                br
+                input#inputUserDOB(type='date', placeholder='DOB')
+                br
+                br
+                button#btnAddUser Add User
+        // /ADD USER
+
+        // USER INFO
+        #userInfo
+            h2 User Info
+            p
+                strong UserName:
+                |  <span id='userInfoUserName'></span>
+                br
+                strong Email:
+                |  <span id='userInfoEmail'></span>
+                br
+                strong PhoneNo:
+                |  <span id='userInfoPhoneNo'></span>
+                br
+                strong DOB:
+                |  <span id='userInfoDOB'></span>
+        // /USER INFO
+
+        // USER LIST
+        h2 User List
+        #userList
+            table
+                thead
+                    th UserName
+                    th Email
+                    th Delete?
+                tbody
+        // /USER LIST
+
+
+    // /WRAPPER
